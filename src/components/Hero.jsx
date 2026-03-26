@@ -33,7 +33,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-gray-400 leading-relaxed"
         >
-          I break down complex user experience problems to create integrity-focused solutions that connect billions of people.
+        I craft seamless digital experiences by blending modern web technologies with AI to deliver intelligent and user-centric solutions.
         </motion.p>
 
         {/* Buttons */}
