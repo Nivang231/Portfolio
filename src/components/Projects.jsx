@@ -7,37 +7,37 @@ const projects = [
     name: "Portfolio Website",
     link: "#",
     github: "#",
-    desc: "Modern portfolio using React & Tailwind with animations.",
+    desc: "A modern and responsive personal portfolio website built using React and Tailwind CSS. It showcases my skills, projects, and contact details with smooth animations. The UI is designed to provide a clean and engaging user experience across all devices.",
   },
   {
     name: "E-commerce App",
     link: "#",
     github: "#",
-    desc: "Full-stack shopping app with interactive UI & cart animations.",
+    desc: "A full-stack e-commerce application with product listing, cart functionality, and user-friendly UI. Built using modern technologies like React, Node.js, and MongoDB. It focuses on performance, smooth navigation, and real-world shopping experience.",
   },
   {
     name: "Todo App",
     link: "#",
     github: "#",
-    desc: "React todo app with dark/light mode & localStorage support.",
+    desc: "A dynamic todo application that allows users to add, delete, and manage tasks efficiently. Includes features like dark/light mode and local storage support. Designed with a clean UI to improve productivity and task tracking.",
   },
   {
     name: "Weather App",
     link: "https://weather-app-bynivang.netlify.app/",
     github: "#",
-    desc: "Weather forecasting app ",
+    desc: "A real-time weather forecasting app that fetches data from a weather API. Users can search any city and get temperature, humidity, and weather conditions instantly. Built with responsive design and smooth user interactions.",
   },
   {
     name: "Image Gallery",
     link: "https://search-images-gallery.netlify.app/",
     github: "#",
-    desc: "Image Gallery app ",
+    desc: "An interactive image gallery application that allows users to search and view images dynamically. Integrated with an external API for real-time image results. Features a responsive layout with smooth loading experience.",
   },
   {
     name: "Avatar Generator",
     link: "#",
     github: "#",
-    desc: "Avatar Generator App",
+    desc: "A fun and interactive avatar generator that creates unique user avatars based on different styles. Users can generate random avatars and customize their appearance. Built with a focus on UI design and user engagement.",
   },
 ];
 
@@ -79,7 +79,7 @@ const Projects = () => {
             </motion.p>
 
             {/* Action Buttons */}
-            <div className="flex gap-4 mt-auto">
+            {/* <div className="flex gap-4 mt-auto">
               <a
                 href={project.link}
                 target="_blank"
@@ -96,7 +96,7 @@ const Projects = () => {
               >
                 Code <FaGithub />
               </a>
-            </div>
+            </div> */}
 
             {/* Decorative Corner */}
             <div className="absolute top-0 right-0 w-12 h-12 bg-cyan-400 rounded-bl-xl opacity-20 pointer-events-none"></div>
