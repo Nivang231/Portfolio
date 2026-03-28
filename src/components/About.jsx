@@ -70,6 +70,7 @@ const About = () => {
         className="text-lg md:text-xl leading-relaxed mb-12 text-center md:text-left"
       >
         I am a passionate learner and developer who loves creating modern and user-friendly experiences while continuously improving my skills and exploring new ideas.
+        I enjoy solving real-world problems and turning simple ideas into meaningful and impactful digital experiences.
       </motion.p>
 
       {/* Education & Skills Grid */}
