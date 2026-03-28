@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaPython 
+import {
+  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaPython
 } from "react-icons/fa";
 import { SiC, SiTailwindcss, SiExpress, SiBootstrap, SiJquery, SiPostman, SiMongodb } from "react-icons/si";
 
@@ -51,7 +51,7 @@ const softSkills = [
 const About = () => {
   return (
     <section id="about" className="py-20 px-6 md:px-20 bg-gray-900 text-gray-300">
-      
+
       {/* Heading */}
       <motion.h2
         initial={{ y: -50, opacity: 0 }}
@@ -69,9 +69,7 @@ const About = () => {
         transition={{ duration: 1, delay: 0.3 }}
         className="text-lg md:text-xl leading-relaxed mb-12 text-center md:text-left"
       >
-        I am a passionate Full Stack Web Developer who loves building modern web applications with React, Node.js, and Tailwind CSS. 
-        Animations, responsive design, and clean, maintainable code are my specialties. 
-        I enjoy turning ideas into interactive and visually appealing user experiences.
+        I am a passionate learner and developer who loves creating modern and user-friendly experiences while continuously improving my skills and exploring new ideas.
       </motion.p>
 
       {/* Education & Skills Grid */}
@@ -106,7 +104,7 @@ const About = () => {
           className="bg-gray-800 p-6 rounded-xl shadow-lg"
         >
           <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Skills</h3>
-          
+
           {/* Hard Skills */}
           <h4 className="text-lg font-semibold text-gray-200 mb-3">Hard Skills</h4>
           <div className="flex flex-wrap gap-6 mb-6 justify-center md:justify-start">
