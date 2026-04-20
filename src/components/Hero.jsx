@@ -44,7 +44,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center gap-4 mt-4"
         >
           {/* CV Download Button */}
-          <a href="/resume_pdf.pdf" download>
+          <a href="/Nivang_Resume.pdf" download>
             <button className="px-6 py-3 bg-cyan-400 text-gray-900 font-bold rounded-lg shadow-lg hover:bg-cyan-500 transition flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,23 +87,8 @@ const Hero = () => {
     className="rounded-full border-4 border-cyan-400 shadow-xl w-64 md:w-80 mx-auto"
   />
 
-  {/* Static Arrow on Left-Top of Image */}
-  {/* <img
-    src="/circle-arrow.svg"
-    alt="Decorative Arrow"
-    className="absolute -top-6 -left-6 w-16 md:w-24"
-  /> */}
+ 
 </div>
-
-      {/* Optional Background Arrow Decoration */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 flex justify-end items-end pointer-events-none"
-      >
-        <img src="/circle-arrow.svg" alt="Background Arrow" className="w-32 md:w-48" />
-      </motion.div> */}
 
     </section>
   );
