@@ -44,7 +44,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center gap-4 mt-4"
         >
           {/* CV Download Button */}
-          <a href="/Nivang_Resume.pdf" download>
+          <a href="/Nivang-Resume.pdf" download>
             <button className="px-6 py-3 bg-cyan-400 text-gray-900 font-bold rounded-lg shadow-lg hover:bg-cyan-500 transition flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
