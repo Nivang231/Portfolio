@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import {
   FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaPython
 } from "react-icons/fa";
-import { SiC, SiTailwindcss, SiExpress, SiBootstrap, SiJquery, SiPostman, SiMongodb } from "react-icons/si";
+import {
+  SiC, SiTailwindcss, SiExpress, SiBootstrap, SiJquery,
+  SiPostman, SiMongodb, SiOpenai,  SiMysql 
+} from "react-icons/si";
 
 // Education Data
 const education = [
@@ -36,8 +39,19 @@ const hardSkills = [
   { icon: FaNodeJs, name: "Node.js", color: "text-green-400" },
   { icon: SiJquery, name: "jQuery", color: "text-blue-300" },
   { icon: SiBootstrap, name: "Bootstrap", color: "text-purple-400" },
+];
+
+// AI Skills
+const aiSkills = [
+  { icon: SiOpenai, name: "Prompt Engineering", color: "text-green-400" },
+  //  { icon: FaJsSquare, name: "AI Integration (JS)", color: "text-yellow-400" },
+];
+
+// Tools
+const tools = [
   { icon: SiPostman, name: "Postman", color: "text-orange-300" },
   { icon: SiMongodb, name: "MongoDB", color: "text-green-600" },
+   { icon: SiMysql, name: "MySQL", color: "text-blue-400" },
   { icon: FaGitAlt, name: "Git & GitHub", color: "text-gray-100" },
 ];
 
@@ -47,6 +61,27 @@ const softSkills = [
   "Presentation Skills",
   "Communication",
 ];
+
+// Reusable Skill UI
+const SkillSection = ({ title, skills }) => (
+  <>
+    <h4 className="text-lg font-semibold text-gray-200 mb-3">{title}</h4>
+    <div className="flex flex-wrap gap-6 mb-6 justify-center md:justify-start">
+      {skills.map((skill, i) => {
+        const Icon = skill.icon;
+        return (
+          <div
+            key={i}
+            className={`flex flex-col items-center gap-2 transform transition duration-300 hover:scale-110 ${skill.color}`}
+          >
+            <Icon className="text-4xl" />
+            <span className="text-sm">{skill.name}</span>
+          </div>
+        );
+      })}
+    </div>
+  </>
+);
 
 const About = () => {
   return (
@@ -70,23 +105,21 @@ const About = () => {
         className="text-lg md:text-xl leading-relaxed mb-12 text-center md:text-left"
       >
         I am a passionate learner and developer who loves creating modern and user-friendly experiences while continuously improving my skills and exploring new ideas.
-        I enjoy solving real-world problems and turning simple ideas into meaningful and impactful digital experiences.
       </motion.p>
 
-      {/* Education & Skills Grid */}
       <div className="grid md:grid-cols-2 gap-12">
 
         {/* Education */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1 }}
           className="bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-cyan-400"
         >
           <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Education</h3>
           <ul className="space-y-4">
             {education.map((edu, i) => (
-              <li key={i} className="text-gray-300">
+              <li key={i}>
                 <span className="font-bold">{edu.degree}</span>
                 {edu.board && <span> - {edu.board}</span>}
                 <br />
@@ -101,41 +134,14 @@ const About = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1 }}
           className="bg-gray-800 p-6 rounded-xl shadow-lg"
         >
           <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Skills</h3>
 
-          {/* Hard Skills */}
-          <h4 className="text-lg font-semibold text-gray-200 mb-3">Hard Skills</h4>
-          <div className="flex flex-wrap gap-6 mb-6 justify-center md:justify-start">
-            {hardSkills.map((skill, i) => {
-              const Icon = skill.icon;
-              const hoverClass = {
-                "text-blue-500": "hover:text-blue-500",
-                "text-yellow-400": "hover:text-yellow-400",
-                "text-orange-500": "hover:text-orange-500",
-                "text-gray-300": "hover:text-gray-300",
-                "text-cyan-400": "hover:text-cyan-400",
-                "text-green-400": "hover:text-green-400",
-                "text-blue-300": "hover:text-blue-300",
-                "text-purple-400": "hover:text-purple-400",
-                "text-orange-300": "hover:text-orange-300",
-                "text-green-600": "hover:text-green-600",
-                "text-gray-100": "hover:text-gray-100",
-              }[skill.color];
-
-              return (
-                <div
-                  key={i}
-                  className={`flex flex-col items-center gap-2 transform transition duration-300 hover:scale-110 ${hoverClass}`}
-                >
-                  <Icon className="text-4xl" />
-                  <span className="text-sm">{skill.name}</span>
-                </div>
-              );
-            })}
-          </div>
+          <SkillSection title="Hard Skills" skills={hardSkills} />
+          <SkillSection title="AI Skills" skills={aiSkills} />
+          <SkillSection title="Tools" skills={tools} />
 
           {/* Soft Skills */}
           <h4 className="text-lg font-semibold text-gray-200 mb-3">Soft Skills</h4>
